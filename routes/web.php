@@ -8,7 +8,6 @@ Route::get('/', [FrontController::class, 'index'])->name('home');
 Route::get('/about', [FrontController::class, 'about'])->name('about');
 
 
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -27,4 +26,8 @@ Route::middleware([
     Route::get('view/application', function(){
         return view('application_view');
     })->name('application.view');
+
+    Route::get('payment', function(){
+        return view('payment');
+    });
 });

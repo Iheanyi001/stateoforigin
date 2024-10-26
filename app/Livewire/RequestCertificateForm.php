@@ -47,6 +47,7 @@ class RequestCertificateForm extends Component
         //$this->dispatch('alert', ['type' => 'success', 'message' => 'Request submitted successfully.']);
         //return dd(RequestModel::all());
         //$this->validate();
+       // return dd($this);
         RequestModel::create([
             "ref" => rand(100,100000).''.time(),
             $this->only([
@@ -77,7 +78,7 @@ class RequestCertificateForm extends Component
 
         $this->dispatch('alert', ['type' => 'success', 'message' => 'Request submitted successfully.']);
 
-        return $this->redirect(route('request.certificate'));
+        return $this->redirect(route('payment'));
     }
     public function render()
     {

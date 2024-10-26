@@ -17,32 +17,15 @@ class RequestModelTable extends DataTableComponent
 
     public function columns(): array
     {
+        return dd(RequestModel::get());
         return [
-            Column::make("Id", "id")
-                ->sortable(),
             Column::make("Ref", "ref")
                 ->sortable()->searchable(),
             Column::make("Application type", "application_type")
                 ->sortable(),
             Column::make("Type", "type")
                 ->sortable(),
-            Column::make("Conversion id", "conversion_id")
-                ->sortable(),
-            Column::make("Lga cert type", "lga_cert_type")
-                ->sortable(),
-            Column::make("Lga cert no", "lga_cert_no")
-                ->sortable(),
-            Column::make("Lga cert", "lga_cert")
-                ->sortable(),
             Column::make("Last name", "last_name")
-                ->sortable(),
-            Column::make("First name", "first_name")
-                ->sortable(),
-            Column::make("Middle name", "middle_name")
-                ->sortable(),
-            Column::make("Dob", "dob")
-                ->sortable(),
-            Column::make("Sex", "sex")
                 ->sortable(),
             Column::make("Lga", "lga")
                 ->sortable(),
@@ -52,20 +35,7 @@ class RequestModelTable extends DataTableComponent
                 ->sortable(),
             Column::make("Mother name", "mother_name")
                 ->sortable(),
-            Column::make("Compound", "compound")
-                ->sortable(),
-            Column::make("Native place", "native_place")
-                ->sortable(),
-            Column::make("Passport", "passport")
-                ->sortable(),
-            Column::make("Nin", "nin")
-                ->sortable(),
-            Column::make("Purpose", "purpose")
-                ->sortable(),
-            Column::make("Created at", "created_at")
-                ->sortable(),
-            Column::make("Updated at", "updated_at")
-                ->sortable(),
+
         ];
     }
 }
