@@ -7,6 +7,7 @@ use Livewire\Component;
 use Livewire\Attributes\Validate;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Url;
+use Illuminate\Support\Facades\Auth;
 class RequestCertificateForm extends Component
 {
     use WithFileUploads;
@@ -45,6 +46,10 @@ class RequestCertificateForm extends Component
     public $have_lgco;
     public $lga_id;
     public $form_show;
+
+    public function mount(){
+        $this->fill(Auth::user());
+    }
 
     public function save(){
         $validated = $this->validate();
