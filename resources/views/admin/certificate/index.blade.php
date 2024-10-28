@@ -116,7 +116,7 @@
                     </div>
                     <div class="col-xs-4"></div>
                     <div class="col-xs-4">
-                        <img style="width:100px" src="{{asset('images/passport.png')}}" alt=""/>
+                        @livewire('qr-code-generator', ['text' => route('certificate.download', ['id' => $data->id])])
                     </div>
 
                 </div>
