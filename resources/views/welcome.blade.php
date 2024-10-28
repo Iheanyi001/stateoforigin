@@ -227,7 +227,7 @@
           </div>
           <div class="contact-box">
             <a
-            href="mailto:info@originabia.abiastate.com"
+            href="mailto:info@originRivers.Riversstate.com"
             class="whatsapp"
             target="_blank"
             >

@@ -25,7 +25,7 @@ class RegisterForm extends Component
 
     public $identification_type;
     public $identification_number;
-    public $state = 'Abia';
+    public $state = 'Rivers';
     public $lga;
     public $city;
     public $address;

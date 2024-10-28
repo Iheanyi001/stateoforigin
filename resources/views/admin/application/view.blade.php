@@ -1,4 +1,4 @@
-@extends('layouts.testapp')
+@extends('layouts.admin')
 
 @section('content')
 <div class="br-mainpanel" style="position: relative;">

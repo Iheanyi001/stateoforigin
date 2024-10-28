@@ -6,7 +6,7 @@ use App\Models\RequestModel;
 use Livewire\Component;
 use Livewire\Attributes\Validate;
 use Livewire\WithFileUploads;
-
+use Livewire\Attributes\Url;
 class RequestCertificateForm extends Component
 {
     use WithFileUploads;
@@ -42,43 +42,30 @@ class RequestCertificateForm extends Component
     #[Validate('required')]
     public $purpose;
     public $application_type;
+    public $have_lgco;
     public $lga_id;
+    public $form_show;
+
     public function save(){
-        //$this->dispatch('alert', ['type' => 'success', 'message' => 'Request submitted successfully.']);
-        //return dd(RequestModel::all());
-        //$this->validate();
-       // return dd($this);
-        RequestModel::create([
-            "ref" => rand(100,100000).''.time(),
-            $this->only([
-                "type",
-                "conversion_id",
-                "lga_cert_type",
-                "lga_cert_type",
-                "lga_cert_no",
-                "lga_cert",
-                "last_name",
-                "first_name",
-                "middle_name",
-                "dob",
-                "sex",
-                "lga",
-                "lga_id",
-                "application_type",
-                "nationality",
-                "father_name",
-                "mother_name",
-                "compound",
-                "native_place",
-                "passport",
-                "nin",
-                "purpose",])
-                ]
-        );
+        $validated = $this->validate();
+
+       $validated['ref'] = rand(100, 100000).''.time();
+       $validated['application_type'] = $this->application_type;
+        RequestModel::create($validated);
 
         $this->dispatch('alert', ['type' => 'success', 'message' => 'Request submitted successfully.']);
 
         return $this->redirect(route('payment'));
+    }
+
+    public function set_form_show(){
+        if($this->application_type == 'lgco'){
+            $this->form_show = "show";
+        }
+        else{
+            $this->form_show == "";
+        }
+
     }
     public function render()
     {

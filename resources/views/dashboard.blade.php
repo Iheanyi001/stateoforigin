@@ -95,7 +95,7 @@
         </div><!-- br-pagebody -->
         <footer class="br-footer">
             <div class="footer-left">
-            <div class="mg-b-2">Copyright © 2024. Abia State Government. All Rights Reserved.</div>
+            <div class="mg-b-2">Copyright © 2024. Rivers State Government. All Rights Reserved.</div>
             </div>
 
         </footer>

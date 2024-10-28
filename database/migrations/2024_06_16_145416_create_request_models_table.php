@@ -34,6 +34,8 @@ return new class extends Migration
             $table->string("passport")->nullable();
             $table->string("nin")->nullable();
             $table->text("purpose")->nullable();
+            $table->enum('payment_status', ['pending', 'success', 'failed'])->default('pending');
+            $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
             $table->timestamps();
             $table->softDeletes();
         });

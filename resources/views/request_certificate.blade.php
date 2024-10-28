@@ -3,9 +3,9 @@
 @section('content')
 <div class="br-mainpanel" style="position: relative;">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <div class="br-pageheader pd-y-15 pd-l-20">
       <nav class="breadcrumb pd-0 mg-0 tx-12">
           <a class="breadcrumb-item" href="/user/home" data-bcup-haslogintext="no">Dashboard</a>
