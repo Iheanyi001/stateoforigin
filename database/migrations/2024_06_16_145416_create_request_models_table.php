@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('request_models', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->string("ref")->unique();
             $table->string("application_type")->nullable();
             $table->string("type")->nullable();

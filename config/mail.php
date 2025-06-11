@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'log'),
+    'default' => 'smtp',
 
     /*
     |--------------------------------------------------------------------------
@@ -40,13 +40,37 @@ return [
         'smtp' => [
             'transport' => 'smtp',
             'url' => env('MAIL_URL'),
-            'host' => env('MAIL_HOST', '127.0.0.1'),
-            'port' => env('MAIL_PORT', 2525),
+            'host' => 'bytebouwers.com.ng',
+            'port' => 465,
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'username' => 'info@bytebouwers.com.ng',
+            'password' => 'Uheropaull_412_227_info_001',
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
+        ],
+
+        // Add another mail configuration for support
+        'support' => [
+            'transport' => 'smtp',
+            'host' => 'kingateketomfoundation.org',
+            'port' => 465,
+            'encryption' => env('SUPPORT_MAIL_ENCRYPTION', 'tls'),
+            'username' => 'support@kingateketomfoundation.org',
+            'password' => 'support_king_001_227',
+            'timeout' => null,
+            'auth_mode' => null,
+        ],
+
+        // Add another mail configuration for notifications
+        'notifications' => [
+            'transport' => 'smtp',
+            'host' => env('NOTIFICATION_MAIL_HOST', 'smtp.mailtrap.io'),
+            'port' => env('NOTIFICATION_MAIL_PORT', 2525),
+            'encryption' => env('NOTIFICATION_MAIL_ENCRYPTION', 'tls'),
+            'username' => env('NOTIFICATION_MAIL_USERNAME'),
+            'password' => env('NOTIFICATION_MAIL_PASSWORD'),
+            'timeout' => null,
+            'auth_mode' => null,
         ],
 
         'ses' => [
@@ -109,8 +133,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' =>  'info@bytebouwers.com.ng',
+        'name' =>'State of Origin - ByteBouwers',
     ],
 
 ];

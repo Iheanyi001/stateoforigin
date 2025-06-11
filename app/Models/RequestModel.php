@@ -35,4 +35,8 @@ class RequestModel extends Model
         "nin",
         "purpose",
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

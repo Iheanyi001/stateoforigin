@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: ftp.pemsecurityguard.com
-        username: stateoforigin@so.bytebouwers.com.ng
-        password: stateoforigin_412_227_001
+        server: ftp.charlesobinnafoundation.org
+        username: lg_993847_92939_lweujs@lg.charlesobinnafoundation.org
+        password: $$lg_948809247_92939_lweujs_227
         protocol: ftps

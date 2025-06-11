@@ -45,6 +45,7 @@
                          <p class="tx-info mg-b-15">{{$father_name}}</p>
                          <label class="tx-10 tx-uppercase tx-mont tx-medium tx-spacing-1 mg-b-2">Mother's name</label>
                          <p class="tx-info mg-b-15">{{$father_name}}</p>
+
                       </div>
                       <div class="col-md-6">
                          <h6 class="tx-gray-800 tx-uppercase tx-semibold tx-13 mg-b-15">Place of Origin</h6>
